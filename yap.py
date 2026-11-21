@@ -110,7 +110,7 @@ e = lambda s: html.escape(s, quote=True)
 adi = lambda m: "Uzuncaburç" if m["ad"] == "Antik Kent" else m["ad"]
 
 def srcset(p, kok):
-    return f'{kok}img/{p}-800.webp 800w, {kok}img/{p}-1600.webp 1600w'
+    return f'{kok}img/{p}-800.webp 800w, {kok}img/{p}-1600.webp {DIMS[p][0]}w'
 
 NAV = """<nav id="nav" class="solid">
   <div class="wrap">
@@ -135,7 +135,7 @@ FOOT = """<footer>
   </div>
 </footer>
 <a class="wa" data-wa="Merhaba, dış çekim hakkında bilgi almak istiyorum." href="#" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg></a>
-<script src="../assets/site.js" defer></script>"""
+<script src="../assets/site.js?v=3" defer></script>"""
 
 def sayfa(m):
     url = f"{SITE}/dis-cekim/{m['slug']}.html"
@@ -169,7 +169,7 @@ def sayfa(m):
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314110f'/><circle cx='32' cy='32' r='15' fill='none' stroke='%23c9a46a' stroke-width='4'/><circle cx='32' cy='32' r='5' fill='%23c9a46a'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/site.css?v=3">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
 <body>

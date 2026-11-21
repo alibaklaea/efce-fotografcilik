@@ -49,7 +49,7 @@ $$('#filters button').forEach(b => b.onclick = () => {
 });
 
 // PhotoSwipe galeri (kaydırma + yakınlaştırma)
-const kok = document.querySelector('script[src$="site.js"]').src.replace(/site\.js.*$/, '');
+const kok = document.querySelector('script[src*="site.js"]').src.replace(/site\.js.*$/, '');
 if (document.querySelector('.pswp-gallery')) {
   const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = kok + 'vendor/photoswipe.css'; document.head.appendChild(css);
   import(kok + 'vendor/photoswipe-lightbox.esm.min.js').then(({ default: PhotoSwipeLightbox }) => {
