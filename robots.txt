@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /qr/kart.html
+Sitemap: https://efcefotografcilik.com.tr/sitemap.xml
